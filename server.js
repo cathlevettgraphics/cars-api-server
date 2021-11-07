@@ -7,7 +7,7 @@ const app = express();
 // Bind server process to a port
 const {
   PORT = 3333,
-  MONGODB_URI = 'mongodb+srv://dbUser:JIr1p1OOZ9Br2Us3@cluster0.hbfyg.mongodb.net/cars-api?retryWrites=true&w=majority',
+  MONGODB_URI,
   // MONGODB_URI = 'mongodb://localhost/cars-001',
 } = process.env;
 
@@ -63,7 +63,7 @@ app.get('/api/v1/cars/:id?', (req, res) => {
 
   const filters = {};
   const { id } = req.params;
-  // Find one pizza
+  // Find one car
   if (id) {
     filters._id = id;
   }
