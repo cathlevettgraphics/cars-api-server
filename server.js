@@ -31,7 +31,7 @@ const carSchema = new Schema({
   bhp: String,
   avatar_url: {
     type: String,
-    required: true,
+    required: false,
     default: 'https://www.iconpacks.net/icons/1/free-car-icon-1057-thumb.png',
   },
 });
