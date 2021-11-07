@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const app = express();
 
@@ -40,6 +41,8 @@ const Car = mongoose.model('Car', carSchema);
 
 // Create static file server
 app.use(express.static('public'));
+
+app.use(cors());
 
 // parse application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: false }));
